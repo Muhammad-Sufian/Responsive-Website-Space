@@ -1,0 +1,130 @@
+<html>
+<head>
+	<script type="text/javascript" src="functions.js"></script>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  onload = "startTimer()" onScroll="checkcoordinates()">
+<div id="headSection">
+	<div id="Title" class="TitleClass">SPACE TRAVEL AGENCY</div>
+	
+	<button onclick="OpenSideBarfuntion()" class="bttnClass"> &#9776; </button>
+	
+	<div id="sideBar" class="sideBarClass" style="width:0px">
+		<button onclick="closeSideBarFunction()" style="color: white; background-color:#101010; position: absolute; top: 5px; right: 5px;">X</button>
+		<a href="default">Home</a>
+		<a href="news.asp">News</a>
+		<a href="contact.asp">Contact</a>
+		<a href="about.asp">About</a>
+	</div>
+	
+	
+	<div id="NavigationBar" class="NavigationBarClass" style="position:fixed; top: 100px;">
+		
+		<a href="default">Home</a>
+		<a href="news.asp">News</a>
+		<a href="contact.asp">Contact</a>
+		<a href="about.asp">About</a>
+	
+	</div>
+</div>
+
+<div id="bodySection">
+	<div id="contentSection1" class="contentSection1Class">
+	 <img id="imagesID" src="Images/Venus.jpg"; height= 600px; width=100%; z-index=2; top="0px">
+	</div>
+	
+	
+	<div id="DestinationSectionContainer" class="contentSection2Class">
+		<div id"DestinationSectionHeader"> 
+			<h1>Destinations</h1>
+		</div>
+		<div id="DestinationSectionBody">
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/mercurydestination1.jpg"; >
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass" > Mercury: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 0.61 AU, Cost: $30M </div>
+					<button data-planet-name="Mercury" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/venusdestination1.jpg";>
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass"> Venus: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 0.28 AU, Cost: $27M </div>
+					<button data-planet-name="Venus" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/marsdestination1.jpg"; >
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass"> Mars: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 0.52 AU, Cost: $5M </div>
+					<button data-planet-name="Mars" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/jupiterdestination1.jpg";>
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass"> Jupiter: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 4.2 AU, Cost: $28M </div>
+					<button data-planet-name="Jupiter" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/saturndestination1.jpg";>
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass"> Saturn: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 8.52 AU, Cost: $35M </div>
+					<button data-planet-name="Saturn" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/uranusdestination1.png";>
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass"> Uranus: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 18.21 AU, Cost: $40M </div>
+					<button data-planet-name="Uranus" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/neptunedestination1.jpg"; >
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass"> Neptune: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 29.09 AU, Cost: $44M </div>
+					<button data-planet-name="Neptune" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+			<div id="DestinationSectionBox">
+				<img class="DestinationImageClass" src="Images/moondestination1.jpg"; >
+				<div class="DestinationPlanetDescriptionLayout">
+					<div class="DestinationPlanetNameClass" > Moon: </div>
+					<div class="DestinationPlanetDescriptionClass"> Distance: 0.002 AU, Cost: $0.5M </div>
+					<button data-planet-name="Moon" class="DestinationPlanetButtonClass" onclick="DestinationButtonFunc(this)">Select Location</button>
+				</div>
+			</div>
+		</div>
+		
+	
+	</div>
+	
+	<div id="contentSection3" class="contentSection3Class">
+		<div id="SelectedLocation"> </div>
+		<img id="SelectedLocationImage" src="Images/Mars.jpg" class="SelectedLocImageClass">
+		<div id="form">
+			<span id="SelectedName">Name: <input></input></span>
+			<span id="SelectedEmail">Email: <input></input></span>
+		</div>
+	</div>
+</div>
+
+<div id="footSection"> </div>
+
+
+
+<script>console.log((document.getElementById("Title").getAttribute("style","font-family")));</script>
+</body>
+
+</html>
